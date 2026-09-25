@@ -1,262 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Devanshu Raj — coder, cybersecurity learner, and AI/ML enthusiast." />
-    <meta name="theme-color" content="#0b1020" />
-    <title>Devanshu Raj | Coder + Hacker Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="matrix-background" aria-hidden="true"></div>
-    <div class="scanlines" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
-    <div id="boot-overlay" class="boot-overlay" aria-live="polite">
-      <div class="boot-window">
-        <div class="boot-header"><span></span><span></span><span></span></div>
-        <div class="boot-body">
-          <p class="boot-line">Initializing portfolio...</p>
-          <p class="boot-line">Loading security modules...</p>
-          <p class="boot-line">Access granted.</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="command-palette" class="command-palette hidden" aria-label="Command palette">
-      <div class="command-bar">
-        <span>></span>
-        <input id="command-input" type="text" aria-label="Command prompt" placeholder="Type a command..." />
-      </div>
-      <div class="command-suggestions">
-        <button type="button" class="command-item" data-command="help">help</button>
-        <button type="button" class="command-item" data-command="about">about</button>
-        <button type="button" class="command-item" data-command="skills">skills</button>
-        <button type="button" class="command-item" data-command="projects">projects</button>
-        <button type="button" class="command-item" data-command="contact">contact</button>
-        <button type="button" class="command-item" data-command="theme hacker">theme hacker</button>
-        <button type="button" class="command-item" data-command="theme coder">theme coder</button>
-      </div>
-    </div>
-
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Devanshu Raj home"><span>DR</span></a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Stack</a>
-        <a href="#contact">Contact</a>
-        <div class="theme-picker">
-          <button class="theme-toggle" type="button" aria-label="Open theme picker" aria-expanded="false" title="Choose theme">☼</button>
-          <div class="theme-menu" role="menu" aria-label="Choose a color theme">
-            <button type="button" data-theme="light" role="menuitem"><i></i> Daylight</button>
-            <button type="button" data-theme="dark" role="menuitem"><i></i> Midnight</button>
-            <button type="button" data-theme="coder" role="menuitem"><i></i> Coder Mode</button>
-            <button type="button" data-theme="hacker" role="menuitem"><i></i> Ethical Hacker</button>
-            <button type="button" data-theme="cyber" role="menuitem"><i></i> Cyber Lime</button>
-            <button type="button" data-theme="sunset" role="menuitem"><i></i> Sunset</button>
-            <button type="button" data-theme="ocean" role="menuitem"><i></i> Ocean</button>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero section-wrap">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> SYSTEM ONLINE • learning &amp; building</p>
-          <h1>Code with intent.<br /><em>Think like a hacker.</em></h1>
-          <p class="hero-text">
-            I'm <strong>Devanshu Raj</strong> — a student developer exploring software engineering,
-            cybersecurity, AI/ML, and the systems behind modern digital tools.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#about">Enter profile</a>
-            <a class="button button-quiet" href="https://github.com/devanshuraj91" target="_blank" rel="noreferrer">GitHub ↗</a>
-          </div>
-
-          <div class="hero-stats">
-            <div><b>05+</b><small>Core interests</small></div>
-            <div><b>24/7</b><small>Curiosity</small></div>
-            <div><b>∞</b><small>Builds</small></div>
-          </div>
-        </div>
-
-        <div class="hero-art reveal" aria-label="Terminal dashboard">
-          <div class="orb"></div>
-          <div class="terminal-card">
-            <div class="terminal-header">
-              <span></span><span></span><span></span>
-              <span class="terminal-title">devanshu@localhost</span>
-            </div>
-            <div class="terminal-body">
-              <p><span class="prompt">$</span> whoami</p>
-              <p>devanshu_raj</p>
-              <p><span class="prompt">$</span> cat mission.txt</p>
-              <p>code • secure • understand • improve</p>
-              <p><span class="prompt">$</span> ./build_future.sh</p>
-              <p class="success">[ok] curiosity loaded</p>
-              <p class="success">[ok] systems ready</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="dashboard-wrap section-wrap reveal">
-        <div class="system-panel">
-          <div class="panel-head">
-            <span>system_status</span>
-            <span class="pill online">ONLINE</span>
-          </div>
-          <div class="panel-grid">
-            <div><small>Uptime</small><strong>∞</strong></div>
-            <div><small>Mode</small><strong>Research</strong></div>
-            <div><small>Focus</small><strong>AI + Security</strong></div>
-            <div><small>State</small><strong>Learning</strong></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="marquee" aria-label="Core disciplines">
-        <div class="marquee-track">
-          <span>SOFTWARE DEVELOPMENT</span><b>✦</b>
-          <span>CYBERSECURITY</span><b>✦</b>
-          <span>ARTIFICIAL INTELLIGENCE</span><b>✦</b>
-          <span>OPEN SOURCE</span><b>✦</b>
-          <span>SOFTWARE DEVELOPMENT</span><b>✦</b>
-          <span>CYBERSECURITY</span>
-        </div>
-      </section>
-
-      <section id="about" class="about section-wrap section-grid">
-        <div class="section-label reveal"><span>01</span><span>Profile</span></div>
-        <div class="about-content reveal">
-          <h2>Curious by nature.<br /><span>Builder by choice.</span></h2>
-          <p>
-            I am a student passionate about programming, ethical cybersecurity, artificial intelligence, open-source tooling,
-            and understanding how systems work from the inside out. I enjoy turning uncertainty into practical knowledge and
-            building things that are both useful and thoughtful.
-          </p>
-          <p>
-            My work sits at the intersection of software, security, and experimentation: Python and web prototypes, Linux and
-            networking exploration, local AI tools, and problem-solving projects that push me to learn faster and think deeper.
-          </p>
-          <blockquote>"Learn → Experiment → Build → Break → Understand → Improve"</blockquote>
-        </div>
-      </section>
-
-      <section id="projects" class="projects section-wrap section-grid">
-        <div class="section-label reveal"><span>02</span><span>Recon</span></div>
-        <div class="projects-content reveal">
-          <h2>Project footprint.<br /><span>Research, build, repeat.</span></h2>
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-head"><span>APP</span><span class="status-tag">BUILDING</span></div>
-              <h3>Local AI Tools</h3>
-              <p>Exploring lightweight AI workflows, local inference, and personal productivity assistants.</p>
-              <ul>
-                <li>Python</li>
-                <li>GGUF / llama.cpp</li>
-                <li>Local models</li>
-              </ul>
-            </article>
-            <article class="project-card">
-              <div class="project-head"><span>SECURITY</span><span class="status-tag">RESEARCH</span></div>
-              <h3>Cyber Lab</h3>
-              <p>Studying attack surfaces, network basics, and defensive practices in a controlled environment.</p>
-              <ul>
-                <li>Linux</li>
-                <li>Networking</li>
-                <li>Security concepts</li>
-              </ul>
-            </article>
-            <article class="project-card">
-              <div class="project-head"><span>WEB</span><span class="status-tag">EXPERIMENTAL</span></div>
-              <h3>Portfolio + Tools</h3>
-              <p>Designing beautiful, interactive web experiences with clear user stories and strong UX flow.</p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="skills section-wrap section-grid">
-        <div class="section-label reveal"><span>03</span><span>Stack</span></div>
-        <div class="skills-content reveal">
-          <h2>Stack overview.<br /><span>Tools, languages, and curiosity.</span></h2>
-          <div class="skill-list">
-            <div class="skill-row">
-              <div class="skill-meta"><span>Python</span><small>Advanced</small></div>
-              <div class="progress"><span style="width: 88%"></span></div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-meta"><span>Web Dev</span><small>Strong</small></div>
-              <div class="progress"><span style="width: 80%"></span></div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-meta"><span>C / C++</span><small>Learning</small></div>
-              <div class="progress"><span style="width: 67%"></span></div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-meta"><span>Linux / Termux</span><small>Exploring</small></div>
-              <div class="progress"><span style="width: 76%"></span></div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-meta"><span>AI / ML</span><small>Active</small></div>
-              <div class="progress"><span style="width: 82%"></span></div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-meta"><span>Cybersecurity</span><small>Researching</small></div>
-              <div class="progress"><span style="width: 72%"></span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="terminal-window section-wrap reveal">
-        <div class="terminal-header small-header">
-          <span>SECURITY_NOTES.md</span>
-          <span>read_only</span>
-        </div>
-        <div class="terminal-screen">
-          <div class="prompt-line"><span class="prompt">&gt;</span> mission</div>
-          <p>Understand the system before trying to improve it.</p>
-          <div class="prompt-line"><span class="prompt">&gt;</span> principles</div>
-          <div class="terminal-grid">
-            <span>01 — Learn responsibly</span>
-            <span>02 — Build practically</span>
-            <span>03 — Share knowledge</span>
-            <span>04 — Keep improving</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact section-wrap reveal">
-        <p class="eyebrow">04 — connect</p>
-        <h2>Have an idea?<br /><em>Let's build it.</em></h2>
-        <a class="contact-link" href="mailto:devanshuraj2891@gmail.com">devanshuraj2891@gmail.com <span>↗</span></a>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/devanshu-raj1" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="https://github.com/devanshuraj91" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://www.youtube.com/@codepreceptor" target="_blank" rel="noreferrer">YouTube ↗</a>
-          <a href="https://t.me/codepreceptor" target="_blank" rel="noreferrer">Telegram ↗</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer section-wrap">
-      <span>© <span id="year"></span> Devanshu Raj</span>
-      <span>Always learning. Always building.</span>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Devanshu Raj — coder, cybersecurity learner, and AI/ML enthusiast." />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Devanshu Raj | Coder + Hacker Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="overrides.css" />
+</head>
+<body>
+  <div class="matrix-background" aria-hidden="true"></div><div class="scanlines" aria-hidden="true"></div><div class="cursor-glow" aria-hidden="true"></div>
+  <div id="boot-overlay" class="boot-overlay" aria-live="polite"><div class="boot-window"><div class="boot-header"><span></span><span></span><span></span></div><div class="boot-body"><p class="boot-line">Initializing portfolio...</p><p class="boot-line">Loading security modules...</p><p class="boot-line">Access granted.</p></div></div></div>
+  <div id="command-palette" class="command-palette hidden" aria-label="Command palette"><div class="command-bar"><span>&gt;</span><input id="command-input" type="text" aria-label="Command prompt" placeholder="Type a command..." /></div><div class="command-suggestions"><button type="button" class="command-item" data-command="help">help</button><button type="button" class="command-item" data-command="about">about</button><button type="button" class="command-item" data-command="skills">skills</button><button type="button" class="command-item" data-command="projects">projects</button><button type="button" class="command-item" data-command="contact">contact</button><button type="button" class="command-item" data-command="theme hacker">theme hacker</button><button type="button" class="command-item" data-command="theme coder">theme coder</button></div></div>
+  <header class="site-header"><a class="brand" href="#top" aria-label="Devanshu Raj home"><span>DR</span></a><nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Stack</a><a href="#contact">Contact</a><div class="theme-picker"><button class="theme-toggle" type="button" aria-label="Open theme picker" aria-expanded="false" title="Choose theme">☼</button><div class="theme-menu" role="menu" aria-label="Choose a color theme"><button type="button" data-theme="light" role="menuitem"><i></i> Daylight</button><button type="button" data-theme="dark" role="menuitem"><i></i> Midnight</button><button type="button" data-theme="coder" role="menuitem"><i></i> Coder Mode</button><button type="button" data-theme="hacker" role="menuitem"><i></i> Ethical Hacker</button><button type="button" data-theme="cyber" role="menuitem"><i></i> Cyber Lime</button><button type="button" data-theme="sunset" role="menuitem"><i></i> Sunset</button><button type="button" data-theme="ocean" role="menuitem"><i></i> Ocean</button></div></div></nav></header>
+  <main id="top">
+    <section class="hero section-wrap"><div class="hero-copy reveal"><p class="eyebrow"><span class="status-dot"></span> SYSTEM ONLINE • learning &amp; building</p><h1>Code with intent.<br /><em>Think like a hacker.</em></h1><p class="hero-text">I'm <strong>Devanshu Raj</strong> — a student developer exploring software engineering, cybersecurity, AI/ML, and the systems behind modern digital tools.</p><div class="hero-actions"><a class="button button-primary" href="#about">Enter profile</a><a class="button button-quiet" href="https://github.com/devanshuraj91" target="_blank" rel="noreferrer">GitHub ↗</a></div><div class="hero-stats"><div><b>05+</b><small>Core interests</small></div><div><b>24/7</b><small>Curiosity</small></div><div><b>∞</b><small>Builds</small></div></div></div><div class="hero-art reveal" aria-label="Terminal dashboard"><div class="orb"></div><div class="terminal-card"><div class="terminal-header"><span></span><span></span><span></span><span class="terminal-title">devanshu@localhost</span></div><div class="terminal-body"><p><span class="prompt">$</span> whoami</p><p>devanshu_raj</p><p><span class="prompt">$</span> cat mission.txt</p><p>code • secure • understand • improve</p><p><span class="prompt">$</span> ./build_future.sh</p><p class="success">[ok] curiosity loaded</p><p class="success">[ok] systems ready</p></div></div></div></section>
+    <section class="dashboard-wrap section-wrap reveal"><div class="system-panel"><div class="panel-head"><span>system_status</span><span class="pill online">ONLINE</span></div><div class="panel-grid"><div><small>Uptime</small><strong>∞</strong></div><div><small>Mode</small><strong>Research</strong></div><div><small>Focus</small><strong>AI + Security</strong></div><div><small>State</small><strong>Learning</strong></div></div></div></section>
+    <section class="marquee" aria-label="Core disciplines"><div class="marquee-track"><span>SOFTWARE DEVELOPMENT</span><b>✦</b><span>CYBERSECURITY</span><b>✦</b><span>ARTIFICIAL INTELLIGENCE</span><b>✦</b><span>OPEN SOURCE</span><b>✦</b><span>SOFTWARE DEVELOPMENT</span><b>✦</b><span>CYBERSECURITY</span></div></section>
+    <section id="about" class="about section-wrap section-grid"><div class="section-label reveal"><span>01</span><span>Profile</span></div><div class="about-content reveal"><h2>Curious by nature.<br /><span>Builder by choice.</span></h2><p>I am a student passionate about programming, ethical cybersecurity, artificial intelligence, open-source tooling, and understanding how systems work from the inside out. I enjoy turning uncertainty into practical knowledge and building things that are both useful and thoughtful.</p><p>My work sits at the intersection of software, security, and experimentation: Python and web prototypes, Linux and networking exploration, local AI tools, and problem-solving projects that push me to learn faster and think deeper.</p><blockquote>"Learn → Experiment → Build → Break → Understand → Improve"</blockquote></div></section>
+    <section id="projects" class="projects section-wrap section-grid"><div class="section-label reveal"><span>02</span><span>Recon</span></div><div class="projects-content reveal"><h2>Project footprint.<br /><span>Research, build, repeat.</span></h2><div class="project-grid"><article class="project-card"><div class="project-head"><span>APP</span><span class="status-tag">BUILDING</span></div><h3>Local AI Tools</h3><p>Exploring lightweight AI workflows, local inference, and personal productivity assistants.</p><ul><li>Python</li><li>GGUF / llama.cpp</li><li>Local models</li></ul></article><article class="project-card"><div class="project-head"><span>SECURITY</span><span class="status-tag">RESEARCH</span></div><h3>Cyber Lab</h3><p>Studying attack surfaces, network basics, and defensive practices in a controlled environment.</p><ul><li>Linux</li><li>Networking</li><li>Security concepts</li></ul></article><article class="project-card"><div class="project-head"><span>WEB</span><span class="status-tag">EXPERIMENTAL</span></div><h3>Portfolio + Tools</h3><p>Designing beautiful, interactive web experiences with clear user stories and strong UX flow.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></article></div></div></section>
+    <section id="skills" class="skills section-wrap section-grid"><div class="section-label reveal"><span>03</span><span>Stack</span></div><div class="skills-content reveal"><h2>Stack overview.<br /><span>Tools, languages, and curiosity.</span></h2><div class="skill-list"><div class="skill-row"><div class="skill-meta"><span>Python</span><small>Advanced</small></div><div class="progress"><span style="width:88%"></span></div></div><div class="skill-row"><div class="skill-meta"><span>Web Dev</span><small>Strong</small></div><div class="progress"><span style="width:80%"></span></div></div><div class="skill-row"><div class="skill-meta"><span>C / C++</span><small>Learning</small></div><div class="progress"><span style="width:67%"></span></div></div><div class="skill-row"><div class="skill-meta"><span>Linux / Termux</span><small>Exploring</small></div><div class="progress"><span style="width:76%"></span></div></div><div class="skill-row"><div class="skill-meta"><span>AI / ML</span><small>Active</small></div><div class="progress"><span style="width:82%"></span></div></div><div class="skill-row"><div class="skill-meta"><span>Cybersecurity</span><small>Researching</small></div><div class="progress"><span style="width:72%"></span></div></div></div></div></section>
+    <section class="terminal-window section-wrap reveal"><div class="terminal-header small-header"><span>INTERACTIVE_SHELL</span><span>safe_mode</span></div><div class="terminal-screen" id="interactive-terminal"><div class="terminal-output" aria-live="polite"><p>Safe browser terminal. Type <b>help</b> to begin.</p></div><label class="terminal-input-line"><span class="prompt">devanshu@web:~$</span><input class="terminal-input" type="text" autocomplete="off" spellcheck="false" aria-label="Interactive terminal command" placeholder="try: whoami" /></label></div></section>
+    <section class="terminal-window section-wrap reveal"><div class="terminal-header small-header"><span>SECURITY_NOTES.md</span><span>read_only</span></div><div class="terminal-screen"><div class="prompt-line"><span class="prompt">&gt;</span> mission</div><p>Understand the system before trying to improve it.</p><div class="prompt-line"><span class="prompt">&gt;</span> principles</div><div class="terminal-grid"><span>01 — Learn responsibly</span><span>02 — Build practically</span><span>03 — Share knowledge</span><span>04 — Keep improving</span></div></div></section>
+    <section id="contact" class="contact section-wrap reveal"><p class="eyebrow">04 — connect</p><h2>Have an idea?<br /><em>Let's build it.</em></h2><a class="contact-link" href="mailto:devanshuraj2891@gmail.com">devanshuraj2891@gmail.com <span>↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/devanshu-raj1" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/devanshuraj91" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.youtube.com/@codepreceptor" target="_blank" rel="noreferrer">YouTube ↗</a><a href="https://t.me/codepreceptor" target="_blank" rel="noreferrer">Telegram ↗</a></div></section>
+  </main><footer class="footer section-wrap"><span>© <span id="year"></span> Devanshu Raj</span><span>Always learning. Always building.</span></footer><script src="script.js"></script>
+</body>
 </html>
