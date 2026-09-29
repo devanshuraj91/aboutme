@@ -1,5 +1,23 @@
 <div align="center">
 
+<a href="https://devanshuraj91.github.io/aboutme/"
+target="_blank"
+rel="noopener noreferrer"
+style="
+  display: inline-block;
+  padding: 12px 24px;
+  background: #111827;
+  color: #00ff88;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #00ff88;
+  border-radius: 8px;
+  cursor: pointer;
+">
+🚀 Visit My Portfolio </a>
+
 # 👋 Hi, I'm Devanshu Raj
 
 ### Student · Developer · Cybersecurity & AI/ML Enthusiast
