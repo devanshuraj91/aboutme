@@ -1,22 +1,8 @@
 <div align="center">
 
-<a href="https://devanshuraj91.github.io/aboutme/"
-target="_blank"
-rel="noopener noreferrer"
-style="
-  display: inline-block;
-  padding: 12px 24px;
-  background: #111827;
-  color: #00ff88;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  border: 2px solid #00ff88;
-  border-radius: 8px;
-  cursor: pointer;
-">
-🚀 Visit My Portfolio </a>
+<a href="https://devanshuraj91.github.io/aboutme/" target="_blank">
+  <img src="https://img.shields.io/badge/🚀%20Visit%20My%20Portfolio-00ff88?style=for-the-badge&logoColor=black" alt="Visit My Portfolio">
+</a>
 
 # 👋 Hi, I'm Devanshu Raj
 
@@ -92,6 +78,10 @@ I believe the best way to learn is to go beyond simply using technology: underst
 - ▶️ **YouTube:** [@codepreceptor](https://www.youtube.com/@codepreceptor)
 - 💬 **Telegram:** [@codepreceptor](https://t.me/codepreceptor)
 - 🌐 **GitHub:** [@devanshuraj91](https://github.com/devanshuraj91)
+
+<a href="https://devanshuraj91.github.io/aboutme/" target="_blank">
+  <img src="https://img.shields.io/badge/Devanshu%20Raj-Portfolio-blue?style=for-the-badge" alt="Devanshu Raj Portfolio">
+</a>
 
 ---
 
