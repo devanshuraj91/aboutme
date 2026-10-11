@@ -1,0 +1,372 @@
+/* Enhanced High-Tech Developer Portfolio Styles */
+
+:root {
+  --bg: #0b1020;
+  --surface: #121a2e;
+  --surface-alt: #0d1426;
+  --text: #edf2ff;
+  --muted: #9aa6c9;
+  --line: rgba(154, 166, 201, 0.2);
+  --accent: #8b7cff;
+  --accent-strong: #b6a6ff;
+  --success: #66f0c2;
+  --warning: #ffce6d;
+  --danger: #ff6b6b;
+  --code-bg: #070b14;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'Inter', sans-serif;
+  
+  /* New enhancement colors */
+  --neon-cyan: #00d4ff;
+  --neon-magenta: #ff00ff;
+  --neon-green: #00ff41;
+  --glass-bg: rgba(11, 16, 32, 0.7);
+  --glass-border: rgba(139, 124, 255, 0.2);
+}
+
+/* Glassmorphism Enhancement */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border-radius: 8px;
+}
+
+/* Enhanced Hero Section with Dynamic Background */
+.hero-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-enhanced::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(139, 124, 255, 0.15) 0%, transparent 70%);
+  animation: pulse-glow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 0.8; }
+}
+
+/* Animated Code Block Display */
+.code-showcase {
+  position: relative;
+  background: rgba(7, 11, 20, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.code-showcase::before {
+  content: '< CODE >';
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  color: var(--neon-cyan);
+  opacity: 0.6;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.code-showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(300px); }
+}
+
+.code-line {
+  display: flex;
+  margin: 4px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.code-line.highlight {
+  background: rgba(139, 124, 255, 0.1);
+  border-left: 2px solid var(--neon-cyan);
+  padding-left: 10px;
+  margin-left: -10px;
+}
+
+.code-number {
+  color: var(--muted);
+  margin-right: 20px;
+  min-width: 30px;
+  text-align: right;
+  opacity: 0.5;
+}
+
+.code-keyword { color: var(--neon-magenta); }
+.code-string { color: var(--success); }
+.code-comment { color: var(--muted); opacity: 0.6; }
+.code-function { color: var(--neon-cyan); }
+
+/* Enhanced Terminal with Neon Glow */
+.terminal-enhanced {
+  border: 1px solid var(--neon-cyan);
+  background: rgba(7, 11, 20, 0.95);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2),
+              inset 0 0 20px rgba(0, 212, 255, 0.05);
+  border-radius: 4px;
+}
+
+.terminal-enhanced .terminal-header {
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent);
+  border-bottom: 1px solid var(--neon-cyan);
+}
+
+.terminal-enhanced .prompt {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+/* System Status Panel Enhancement */
+.status-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.status-item {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: rgba(139, 124, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.status-item:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.status-item-label {
+  font: 10px var(--mono);
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.status-item-value {
+  font-size: 24px;
+  color: var(--neon-cyan);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.status-item.active .status-item-value {
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Enhanced Project Cards with 3D Effect */
+.project-card-enhanced {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.project-card-enhanced .card-inner {
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-style: preserve-3d;
+}
+
+.project-card-enhanced:hover .card-inner {
+  transform: rotateY(5deg) rotateX(-2deg);
+}
+
+.project-card-enhanced .card-face {
+  backface-visibility: hidden;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-height: 280px;
+  transition: all 0.3s ease;
+}
+
+.project-card-enhanced:hover .card-face {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: 0 0 20px rgba(139, 124, 255, 0.2);
+}
+
+/* Skill Visualization Enhancement */
+.skill-bar-enhanced {
+  position: relative;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent,
+    var(--neon-cyan),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.skill-bar-enhanced .progress {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--success));
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(139, 124, 255, 0.5);
+  transition: width 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Floating Code Elements */
+.floating-code {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.08;
+  font: 11px var(--mono);
+  color: var(--neon-cyan);
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+/* Tech Stack Grid Enhancement */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tech-item {
+  padding: 16px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: rgba(139, 124, 255, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-item:hover {
+  background: rgba(139, 124, 255, 0.15);
+  border-color: var(--neon-cyan);
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.tech-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.tech-name {
+  font: 12px var(--mono);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Enhanced Button Styles */
+.button-enhanced {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  background: rgba(0, 212, 255, 0.05);
+  padding: 12px 24px;
+  font: 11px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.button-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.button-enhanced:hover {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.button-enhanced:hover::before {
+  left: 100%;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  
+  .code-showcase {
+    font-size: 11px;
+  }
+}
+
+/* Accessibility & Performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --neon-cyan: #0066cc;
+    --neon-magenta: #cc0066;
+    --neon-green: #009900;
+  }
+}
